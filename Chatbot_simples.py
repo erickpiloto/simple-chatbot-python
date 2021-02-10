@@ -72,6 +72,10 @@ def responder(mensagem):
 def relacionado(texto_x):
     if 'nome' in texto_x:
         texto_y = 'Qual o seu nome?'
+    elif 'quem é voce' in texto_x:
+        texto_y = 'Qual o seu nome?'
+    elif 'se chama' in texto_x:
+        texto_y = 'Qual o seu nome?'
     elif 'oi' in texto_x:
         texto_y = 'Oi!'
     elif 'tempo' in texto_x:
@@ -96,6 +100,8 @@ def envia_msg(mensagem):
     resposta = responder(mensagem)
     print(bot_template.format(resposta))
 
+print('Olá '+user_name+'. Eu sou o um robô.')
+print('Você pode conversar comigo ou me mandar parar.')
 while 1:
     meu_input = input()
     meu_input = meu_input.lower()
